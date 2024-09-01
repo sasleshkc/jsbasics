@@ -1,0 +1,38 @@
+<!-- constructive functions are used to maximize efficiency -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructive functions</title>
+    
+ </head>
+ <body>
+    <script>
+        // div1=document.createElement("div");
+        // document.body.appendChild(div1);
+        // document.div1.innerHTML="Hello";
+        var runner=function(runner,runnerage,speed,time){
+            this.runner=runner;
+            this.runnerage=runnerage;
+            this.s=parseInt(speed);
+            this.t=parseInt(time);
+            this.miles=function(){
+                return(this.s * this.t);
+            }
+            this.details=function(){
+                var div=document.createElement("pre");
+                div.innerHTML=this.runner+" of age= "+this.runnerage+" can run for "+this.miles()+" miles.";
+                document.body.appendChild(div);
+                div.style.fontSize="17px";
+                div.style.fontFamily='Georgia','Arial';
+                div.style.color="red";
+            }
+        }
+        var myrunner=new runner("ram",20,3,3);
+        myrunner.details();
+        var myrunner1=new runner("shyam",24,9,3);
+        myrunner1.details();
+    </script>
+ </body>
+ </html>
